@@ -1,0 +1,57 @@
+// 1. Biến (Variables)
+$primary-color: #3498db;
+$dark-color: #2c3e50;
+$font-stack: Arial, sans-serif;
+
+// 2. Mixin
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 3. Nesting & Styling
+body {
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.header {
+  background-color: $dark-color;
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+
+.main-content {
+  @include flex-center;
+  min-height: 300px;
+  padding: 20px;
+
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
