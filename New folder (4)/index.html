@@ -3,54 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài tập Tạo layout với RWD</title>
+    <title>Responsive Image Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <h1>Header / Logo</h1>
-    </header>
+    <h2 style="text-align:center; padding: 20px 0;">Responsive Image Gallery</h2>
 
-    <!-- Navigation Bar -->
-    <nav class="topnav">
-        <a href="#">Trang chủ</a>
-        <a href="#">Tin tức</a>
-        <a href="#">Sản phẩm</a>
-        <a href="#">Liên hệ</a>
-    </nav>
-
-    <!-- Main Container -->
-    <div class="row">
-        <!-- Sidebar trái (Menu / Cột phụ) -->
-        <aside class="column side">
-            <h2>Sidebar</h2>
-            <ul>
-                <li><a href="#">Danh mục 1</a></li>
-                <li><a href="#">Danh mục 2</a></li>
-                <li><a href="#">Danh mục 3</a></li>
-            </ul>
-        </aside>
-
-        <!-- Main Content (Nội dung chính) -->
-        <main class="column middle">
-            <h2>Nội dung chính</h2>
-            <p>Đây là khu vực hiển thị nội dung chính của trang web. Bố cục sẽ tự động co giãn và điều chỉnh theo kích thước màn hình thiết bị.</p>
-            <p>Trên màn hình máy tính, bố cục chia làm 3 cột. Trên màn hình điện thoại, các cột sẽ xếp chồng theo chiều dọc.</p>
-        </main>
-
-        <!-- Sidebar phải (Quảng cáo / Tin phụ) -->
-        <aside class="column side">
-            <h2>Tin nổi bật</h2>
-            <p>Thông tin quảng cáo hoặc các liên kết bổ sung.</p>
-        </aside>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="https://via.placeholder.com/600/400">
+                <img src="https://via.placeholder.com/600/400" alt="Image 1">
+            </a>
+            <div class="desc">Thêm mô tả cho ảnh 1 tại đây</div>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Website Responsive Layout</p>
-    </footer>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="https://via.placeholder.com/600/400">
+                <img src="https://via.placeholder.com/600/400" alt="Image 2">
+            </a>
+            <div class="desc">Thêm mô tả cho ảnh 2 tại đây</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="https://via.placeholder.com/600/400">
+                <img src="https://via.placeholder.com/600/400" alt="Image 3">
+            </a>
+            <div class="desc">Thêm mô tả cho ảnh 3 tại đây</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="https://via.placeholder.com/600/400">
+                <img src="https://via.placeholder.com/600/400" alt="Image 4">
+            </a>
+            <div class="desc">Thêm mô tả cho ảnh 4 tại đây</div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
 
 </body>
 </html>

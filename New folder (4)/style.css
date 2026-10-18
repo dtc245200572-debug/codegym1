@@ -4,89 +4,54 @@
     padding: 0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-}
-
-/* Header */
-.header {
-    background-color: #333;
-    color: white;
-    padding: 30px;
-    text-align: center;
-}
-
-/* Navigation Bar */
-.topnav {
+div.gallery {
+    border: 1px solid #ccc;
+    border-radius: 4px;
     overflow: hidden;
-    background-color: #444;
 }
 
-.topnav a {
-    float: left;
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
     display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
 }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Flexbox Layout cho 3 cột */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 15px 0;
-    gap: 15px;
-    padding: 0 15px;
-}
-
-/* Cột chính và hai cột bên */
-.column {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-/* Hai cột phụ ở hai bên */
-.column.side {
-    flex: 25%;
-}
-
-/* Cột nội dung chính ở giữa */
-.column.middle {
-    flex: 50%;
-}
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+div.desc {
     padding: 15px;
-    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
 }
 
-/* Responsive Layout - Khi màn hình nhỏ hơn hoặc bằng 768px (Tablet/Mobile) */
-@media screen and (max-width: 768px) {
-    .row {
-        flex-direction: column;
-    }
+/* Mặc định cho màn hình lớn hơn 700px: 4 ảnh trên 1 dòng (25% chiều rộng mỗi ảnh) */
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    margin-bottom: 15px;
+}
 
-    .column.side, 
-    .column.middle {
-        width: 100%;
-    }
+/* Xóa float sau khối gallery */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
-    .topnav a {
-        float: none;
+/* Màn hình nhỏ hơn 700px: Hiển thị 2 ảnh trên 1 dòng (50% chiều rộng) */
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+/* Màn hình nhỏ hơn 500px: Hiển thị 1 ảnh trên 1 dòng (100% chiều rộng) */
+@media only screen and (max-width: 500px) {
+    .responsive {
         width: 100%;
-        text-align: left;
     }
 }
