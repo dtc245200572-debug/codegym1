@@ -3,107 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Đăng Ký - Bootstrap Forms</title>
+    <title>Landing Page với Bootstrap và Hình Ảnh</title>
     <!-- Nhúng CSS Bootstrap 5 CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Nhúng Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<body class="bg-light">
+<body>
 
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card shadow-sm border-0 rounded-3">
-                    <div class="card-body p-4 p-md-5">
-                        
-                        <!-- Tiêu đề trang -->
-                        <h2 class="text-center fw-bold mb-2">Đăng Ký Tài Khoản</h2>
-                        <p class="text-muted text-center mb-4">Vui lòng điền đầy đủ thông tin bên dưới để tạo tài khoản.</p>
+    <!-- 1. Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">TechLanding</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Tính năng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cta">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-                        <form>
-                            <!-- 1. Họ và tên -->
-                            <div class="mb-3">
-                                <label for="fullname" class="form-label fw-semibold">Họ và tên</label>
-                                <input type="text" class="form-control" id="fullname" placeholder="Nhập họ và tên của bạn" required>
-                            </div>
+    <!-- 2. Banner / Hero Section (Bootstrap 5 chuẩn không dùng Jumbotron) -->
+    <section id="hero" class="bg-primary text-white text-center py-5">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold">Giải Pháp Đột Phá Cho Doanh Nghiệp</h1>
+            <p class="lead mb-4">Nâng cao hiệu suất làm việc và tối ưu hóa quy trình với nền tảng công nghệ hàng đầu.</p>
+            <a href="#cta" class="btn btn-light btn-lg fw-semibold me-2">Khám Phá Ngay</a>
+            <a href="#about" class="btn btn-outline-light btn-lg">Tìm Hiểu Thêm</a>
+        </div>
+    </section>
 
-                            <!-- 2. Email -->
-                            <div class="mb-3">
-                                <label for="email" class="form-label fw-semibold">Địa chỉ Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-                                <div class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất kỳ ai khác.</div>
-                            </div>
+    <!-- 3. Section Giới Thiệu (Hình ảnh + Nội dung mô tả) -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-6">
+                    <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow" alt="Giới thiệu sản phẩm">
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2 class="fw-bold mb-3">Về Sản Phẩm Của Chúng Tôi</h2>
+                    <p class="text-muted">Sản phẩm mang lại giải pháp toàn diện giúp doanh nghiệp tự động hóa các quy trình phức tạp. Với giao diện thân thiện, dễ sử dụng và khả năng tương thích cao trên mọi thiết bị.</p>
+                    <p class="text-muted">Hơn 10.000+ khách hàng đã tin tưởng và sử dụng để tối ưu hoá hiệu quả công việc hàng ngày.</p>
+                    <a href="#cta" class="btn btn-primary">Trải Nghiệm Miễn Phí</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <!-- 3. Mật khẩu -->
-                            <div class="mb-3">
-                                <label for="password" class="form-label fw-semibold">Mật khẩu</label>
-                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
-                            </div>
+    <!-- 4. Section Danh Sách Tính Năng (Row 4 cột) -->
+    <section id="features" class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-2">Tính Năng Nổi Bật</h2>
+            <p class="text-muted mb-5">Những ưu điểm tuyệt vời giúp bạn quản lý công việc hiệu quả</p>
+            
+            <div class="row g-4">
+                <!-- Tính năng 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 p-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-speedometer2 text-primary display-5 mb-3"></i>
+                            <h5 class="card-title fw-bold">Tốc Độ Cao</h5>
+                            <p class="card-text text-muted">Xử lý dữ liệu nhanh chóng, tiết kiệm thời gian tối đa.</p>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- 4. Xác nhận mật khẩu -->
-                            <div class="mb-3">
-                                <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu</label>
-                                <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
-                            </div>
+                <!-- Tính năng 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 p-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-shield-check text-success display-5 mb-3"></i>
+                            <h5 class="card-title fw-bold">Bảo Mật Cao</h5>
+                            <p class="card-text text-muted">Mã hóa dữ liệu chuẩn quốc tế, an toàn tuyệt đối.</p>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- 5. Giới tính (Radio buttons) -->
-                            <div class="mb-3">
-                                <label class="form-label fw-semibold d-block">Giới tính</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
-                                    <label class="form-check-label" for="male">Nam</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
-                                    <label class="form-check-label" for="female">Nữ</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="other" value="other">
-                                    <label class="form-check-label" for="other">Khác</label>
-                                </div>
-                            </div>
+                <!-- Tính năng 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 p-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-phone text-warning display-5 mb-3"></i>
+                            <h5 class="card-title fw-bold">Giao Diện RWD</h5>
+                            <p class="card-text text-muted">Hiển thị hoàn hảo trên cả máy tính, máy tính bảng và điện thoại.</p>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- 6. Sở thích (Checkboxes) -->
-                            <div class="mb-3">
-                                <label class="form-label fw-semibold d-block">Sở thích</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="sports" value="sports">
-                                    <label class="form-check-label" for="sports">Thể thao</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="music" value="music">
-                                    <label class="form-check-label" for="music">Âm nhạc</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="travel" value="travel">
-                                    <label class="form-check-label" for="travel">Du lịch</label>
-                                </div>
-                            </div>
-
-                            <!-- 7. Quốc gia (Dropdown Select) -->
-                            <div class="mb-4">
-                                <label for="country" class="form-label fw-semibold">Quốc gia</label>
-                                <select class="form-select" id="country" required>
-                                    <option value="" selected disabled>-- Chọn quốc gia --</option>
-                                    <option value="VN">Việt Nam</option>
-                                    <option value="US">Mỹ (United States)</option>
-                                    <option value="JP">Nhật Bản</option>
-                                    <option value="KR">Hàn Quốc</option>
-                                </select>
-                            </div>
-
-                            <!-- 8. Nút Submit -->
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary btn-lg fw-bold">Đăng Ký</button>
-                            </div>
-                        </form>
-
+                <!-- Tính năng 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 p-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-headset text-danger display-5 mb-3"></i>
+                            <h5 class="card-title fw-bold">Hỗ Trợ 24/7</h5>
+                            <p class="card-text text-muted">Đội ngũ kỹ thuật luôn sẵn sàng giải đáp thắc mắc của bạn.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Nhúng Bootstrap 5 JS CDN -->
+    <!-- 5. Section Call To Action (CTA) -->
+    <section id="cta" class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Sẵn Sàng Nâng Tầm Doanh Nghiệp?</h2>
+            <p class="lead mb-4">Đăng ký ngay hôm nay để nhận 14 ngày dùng thử hoàn toàn miễn phí.</p>
+            <a href="#" class="btn btn-primary btn-lg fw-bold px-5">Đăng Ký Ngay</a>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="bg-secondary text-white text-center py-3">
+        <div class="container">
+            <p class="m-0">&copy; 2026 TechLanding. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Nhúng JS Bootstrap 5 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
