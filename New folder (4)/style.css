@@ -1,4 +1,4 @@
-\* {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,33 +10,51 @@ body {
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin: 15px 0 10px 0;
+    font-size: 18px;
     color: #333;
 }
 
-/* Vùng chứa Flex Container */
-.container {
-    display: flex;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 6px;
-    gap: 10px;
-    width: 100%;
+hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px dashed #ccc;
 }
 
-/* Các Flex Item mặc định */
-.item {
-    background-color: #3498db;
+/* Ví dụ 1: flex-flow: row nowrap */
+.container-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+.container-1 > div {
+    background-color: #007bff;
     color: white;
-    padding: 20px;
+    width: 100px;
+    margin: 10px;
     text-align: center;
+    line-height: 50px;
     font-weight: bold;
     border-radius: 4px;
-    flex-grow: 1; /* Mặc định mỗi item tăng trưởng tỉ lệ 1 */
 }
 
-/* Áp dụng flex-grow riêng cho Item 2 */
-.item2 {
-    background-color: #e74c3c;
-    flex-grow: 3; /* Item 2 mở rộng gấp 3 lần khoảng không còn lại so với các item khác */
+/* Ví dụ 2: flex-flow: row-reverse nowrap */
+.container-2 {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+.container-2 > div {
+    background-color: #28a745;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 4px;
 }
