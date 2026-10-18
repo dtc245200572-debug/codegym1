@@ -4,54 +4,61 @@
     padding: 0;
 }
 
-div.gallery {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    overflow: hidden;
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
-div.gallery:hover {
-    border: 1px solid #777;
+h2 {
+    margin: 15px 0 10px 0;
+    font-size: 18px;
+    color: #333;
 }
 
-div.gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
+hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px dashed #ccc;
 }
 
-div.desc {
-    padding: 15px;
+/* Style chung cho Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.grid-container > div {
+    padding: 20px;
     text-align: center;
-    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
 }
 
-/* Mặc định cho màn hình lớn hơn 700px: 4 ảnh trên 1 dòng (25% chiều rộng mỗi ảnh) */
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-    margin-bottom: 15px;
+/* Ví dụ 1: Length (px) */
+.ex-length {
+    grid-row-gap: 20px;
+}
+.ex-length > div {
+    background-color: lightblue;
 }
 
-/* Xóa float sau khối gallery */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+/* Ví dụ 2: Percentage (%) */
+.ex-percent {
+    grid-row-gap: 5%;
+    height: 300px;
+}
+.ex-percent > div {
+    background-color: lightgreen;
 }
 
-/* Màn hình nhỏ hơn 700px: Hiển thị 2 ảnh trên 1 dòng (50% chiều rộng) */
-@media only screen and (max-width: 700px) {
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
+/* Ví dụ 3: Global values (initial) */
+.ex-global {
+    grid-row-gap: initial;
 }
-
-/* Màn hình nhỏ hơn 500px: Hiển thị 1 ảnh trên 1 dòng (100% chiều rộng) */
-@media only screen and (max-width: 500px) {
-    .responsive {
-        width: 100%;
-    }
+.ex-global > div {
+    background-color: lightcoral;
+    color: white;
 }

@@ -3,50 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Gallery</title>
+    <title>Thực hành grid-row-gap Property</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h2 style="text-align:center; padding: 20px 0;">Responsive Image Gallery</h2>
-
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="https://via.placeholder.com/600/400">
-                <img src="https://via.placeholder.com/600/400" alt="Image 1">
-            </a>
-            <div class="desc">Thêm mô tả cho ảnh 1 tại đây</div>
-        </div>
+    <h2>1. Giá trị Length (grid-row-gap: 20px)</h2>
+    <div class="grid-container ex-length">
+        <div>Ô 1</div>
+        <div>Ô 2</div>
+        <div>Ô 3</div>
+        <div>Ô 4</div>
     </div>
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="https://via.placeholder.com/600/400">
-                <img src="https://via.placeholder.com/600/400" alt="Image 2">
-            </a>
-            <div class="desc">Thêm mô tả cho ảnh 2 tại đây</div>
-        </div>
+    <hr>
+
+    <h2>2. Giá trị Percentage (grid-row-gap: 5%)</h2>
+    <div class="grid-container ex-percent">
+        <div>Ô 1</div>
+        <div>Ô 2</div>
+        <div>Ô 3</div>
+        <div>Ô 4</div>
     </div>
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="https://via.placeholder.com/600/400">
-                <img src="https://via.placeholder.com/600/400" alt="Image 3">
-            </a>
-            <div class="desc">Thêm mô tả cho ảnh 3 tại đây</div>
-        </div>
-    </div>
+    <hr>
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="https://via.placeholder.com/600/400">
-                <img src="https://via.placeholder.com/600/400" alt="Image 4">
-            </a>
-            <div class="desc">Thêm mô tả cho ảnh 4 tại đây</div>
-        </div>
+    <h2>3. Giá trị Global (grid-row-gap: initial)</h2>
+    <div class="grid-container ex-global">
+        <div>Ô 1</div>
+        <div>Ô 2</div>
+        <div>Ô 3</div>
+        <div>Ô 4</div>
     </div>
-
-    <div class="clearfix"></div>
 
 </body>
 </html>
