@@ -3,130 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page với Bootstrap và Hình Ảnh</title>
-    <!-- Nhúng CSS Bootstrap 5 CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!-- Nhúng Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Trang Chủ Bootstrap</title>
+    <!-- Bước 1: Nhúng CSS Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Nhúng Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <!-- 1. Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <!-- Bước 2: Navbar với Font Awesome -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">TechLanding</a>
+            <a class="navbar-brand" href="#"><i class="fas fa-home"></i> MyWebsite</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#hero">Trang chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#features">Tính năng</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#cta">Đăng ký</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- 2. Banner / Hero Section (Bootstrap 5 chuẩn không dùng Jumbotron) -->
-    <section id="hero" class="bg-primary text-white text-center py-5">
-        <div class="container py-4">
-            <h1 class="display-4 fw-bold">Giải Pháp Đột Phá Cho Doanh Nghiệp</h1>
-            <p class="lead mb-4">Nâng cao hiệu suất làm việc và tối ưu hóa quy trình với nền tảng công nghệ hàng đầu.</p>
-            <a href="#cta" class="btn btn-light btn-lg fw-semibold me-2">Khám Phá Ngay</a>
-            <a href="#about" class="btn btn-outline-light btn-lg">Tìm Hiểu Thêm</a>
-        </div>
-    </section>
-
-    <!-- 3. Section Giới Thiệu (Hình ảnh + Nội dung mô tả) -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-12 col-md-6">
-                    <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow" alt="Giới thiệu sản phẩm">
-                </div>
-                <div class="col-12 col-md-6">
-                    <h2 class="fw-bold mb-3">Về Sản Phẩm Của Chúng Tôi</h2>
-                    <p class="text-muted">Sản phẩm mang lại giải pháp toàn diện giúp doanh nghiệp tự động hóa các quy trình phức tạp. Với giao diện thân thiện, dễ sử dụng và khả năng tương thích cao trên mọi thiết bị.</p>
-                    <p class="text-muted">Hơn 10.000+ khách hàng đã tin tưởng và sử dụng để tối ưu hoá hiệu quả công việc hàng ngày.</p>
-                    <a href="#cta" class="btn btn-primary">Trải Nghiệm Miễn Phí</a>
-                </div>
+    <!-- Bước 3: Hero Section với Carousel (Slideshow) -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/1200x400/007bff/ffffff?text=Slide+1" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1200x400/28a745/ffffff?text=Slide+2" class="d-block w-100" alt="Slide 2">
             </div>
         </div>
-    </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
 
-    <!-- 4. Section Danh Sách Tính Năng (Row 4 cột) -->
-    <section id="features" class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-2">Tính Năng Nổi Bật</h2>
-            <p class="text-muted mb-5">Những ưu điểm tuyệt vời giúp bạn quản lý công việc hiệu quả</p>
-            
-            <div class="row g-4">
-                <!-- Tính năng 1 -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card h-100 p-3 border-0 shadow-sm">
-                        <div class="card-body">
-                            <i class="bi bi-speedometer2 text-primary display-5 mb-3"></i>
-                            <h5 class="card-title fw-bold">Tốc Độ Cao</h5>
-                            <p class="card-text text-muted">Xử lý dữ liệu nhanh chóng, tiết kiệm thời gian tối đa.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Bước 4: Section Căn Giữa Nội Dung với Flexbox -->
+    <div class="d-flex justify-content-center align-items-center bg-light py-5 text-center">
+        <h2>Chào mừng đến với trang web của chúng tôi!</h2>
+    </div>
 
-                <!-- Tính năng 2 -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card h-100 p-3 border-0 shadow-sm">
-                        <div class="card-body">
-                            <i class="bi bi-shield-check text-success display-5 mb-3"></i>
-                            <h5 class="card-title fw-bold">Bảo Mật Cao</h5>
-                            <p class="card-text text-muted">Mã hóa dữ liệu chuẩn quốc tế, an toàn tuyệt đối.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tính năng 3 -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card h-100 p-3 border-0 shadow-sm">
-                        <div class="card-body">
-                            <i class="bi bi-phone text-warning display-5 mb-3"></i>
-                            <h5 class="card-title fw-bold">Giao Diện RWD</h5>
-                            <p class="card-text text-muted">Hiển thị hoàn hảo trên cả máy tính, máy tính bảng và điện thoại.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tính năng 4 -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card h-100 p-3 border-0 shadow-sm">
-                        <div class="card-body">
-                            <i class="bi bi-headset text-danger display-5 mb-3"></i>
-                            <h5 class="card-title fw-bold">Hỗ Trợ 24/7</h5>
-                            <p class="card-text text-muted">Đội ngũ kỹ thuật luôn sẵn sàng giải đáp thắc mắc của bạn.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Bước 5: Contact Form với Bootstrap Form -->
+    <section class="container py-4">
+        <h3 class="text-center mb-4">Liên hệ với chúng tôi</h3>
+        <form style="max-width: 600px; margin: 0 auto;">
+            <div class="mb-3">
+                <label for="name" class="form-label fw-bold">Tên của bạn</label>
+                <input type="text" class="form-control" id="name" placeholder="Nhập tên" required>
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="email" class="form-label fw-bold">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Nhập email" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Gửi</button>
+        </form>
     </section>
 
-    <!-- 5. Section Call To Action (CTA) -->
-    <section id="cta" class="py-5 bg-dark text-white text-center">
-        <div class="container">
-            <h2 class="fw-bold mb-3">Sẵn Sàng Nâng Tầm Doanh Nghiệp?</h2>
-            <p class="lead mb-4">Đăng ký ngay hôm nay để nhận 14 ngày dùng thử hoàn toàn miễn phí.</p>
-            <a href="#" class="btn btn-primary btn-lg fw-bold px-5">Đăng Ký Ngay</a>
-        </div>
-    </section>
-
-    <!-- 6. Footer -->
-    <footer class="bg-secondary text-white text-center py-3">
-        <div class="container">
-            <p class="m-0">&copy; 2026 TechLanding. All rights reserved.</p>
-        </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="m-0">&copy; 2026 MyWebsite. All rights reserved.</p>
     </footer>
 
-    <!-- Nhúng JS Bootstrap 5 CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
