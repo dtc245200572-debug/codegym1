@@ -3,45 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Responsive</title>
+    <title>Bài tập Tạo layout với RWD</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header class="header">
-        <div class="logo">MyBrand</div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#services">Dịch vụ</a></li>
-                <li><a href="#testimonials">Đánh giá</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </nav>
+        <h1>Header / Logo</h1>
     </header>
 
-    <section class="hero">
-        <h1>Chào mừng đến với MyBrand</h1>
-        <p>Giải pháp số 1 cho doanh nghiệp của bạn</p>
-        <a href="#services" class="btn">Tìm hiểu thêm</a>
-    </section>
+    <!-- Navigation Bar -->
+    <nav class="topnav">
+        <a href="#">Trang chủ</a>
+        <a href="#">Tin tức</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Liên hệ</a>
+    </nav>
 
-    <section id="services" class="services">
-        <h2>Dịch vụ của chúng tôi</h2>
-        <div class="service-container">
-            <div class="service">Thiết kế web</div>
-            <div class="service">Phát triển phần mềm</div>
-            <div class="service">Marketing số</div>
-        </div>
-    </section>
+    <!-- Main Container -->
+    <div class="row">
+        <!-- Sidebar trái (Menu / Cột phụ) -->
+        <aside class="column side">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#">Danh mục 1</a></li>
+                <li><a href="#">Danh mục 2</a></li>
+                <li><a href="#">Danh mục 3</a></li>
+            </ul>
+        </aside>
 
-    <section id="testimonials" class="testimonials">
-        <h2>Khách hàng nói gì?</h2>
-        <div class="testimonial">"Dịch vụ tuyệt vời!" - Khách hàng A</div>
-        <div class="testimonial">"Tôi rất hài lòng với MyBrand." - Khách hàng B</div>
-    </section>
+        <!-- Main Content (Nội dung chính) -->
+        <main class="column middle">
+            <h2>Nội dung chính</h2>
+            <p>Đây là khu vực hiển thị nội dung chính của trang web. Bố cục sẽ tự động co giãn và điều chỉnh theo kích thước màn hình thiết bị.</p>
+            <p>Trên màn hình máy tính, bố cục chia làm 3 cột. Trên màn hình điện thoại, các cột sẽ xếp chồng theo chiều dọc.</p>
+        </main>
 
+        <!-- Sidebar phải (Quảng cáo / Tin phụ) -->
+        <aside class="column side">
+            <h2>Tin nổi bật</h2>
+            <p>Thông tin quảng cáo hoặc các liên kết bổ sung.</p>
+        </aside>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 MyBrand. All rights reserved.</p>
+        <p>&copy; 2026 Website Responsive Layout</p>
     </footer>
+
 </body>
 </html>

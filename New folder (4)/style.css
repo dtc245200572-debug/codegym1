@@ -1,133 +1,92 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-}
-
-/* Header & Nav */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 15px 20px;
-    color: white;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
 }
 
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
+/* Header */
+.header {
     background-color: #333;
     color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.topnav {
+    overflow: hidden;
+    background-color: #444;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
     text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Flexbox Layout cho 3 cột */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    gap: 15px;
+    padding: 0 15px;
+}
+
+/* Cột chính và hai cột bên */
+.column {
+    background-color: white;
+    padding: 20px;
     border-radius: 5px;
 }
 
-/* Services Section */
-.services {
-    text-align: center;
-    padding: 50px 20px;
+/* Hai cột phụ ở hai bên */
+.column.side {
+    flex: 25%;
 }
 
-.services h2 {
-    margin-bottom: 30px;
-}
-
-.service-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.service {
-    flex: 1;
-    min-width: 250px;
-    background-color: lightblue;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* Testimonials Section */
-.testimonials {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #ddd;
-}
-
-.testimonials h2 {
-    margin-bottom: 20px;
-}
-
-.testimonial {
-    margin: 10px 0;
-    font-style: italic;
+/* Cột nội dung chính ở giữa */
+.column.middle {
+    flex: 50%;
 }
 
 /* Footer */
 .footer {
-    text-align: center;
-    padding: 20px;
     background-color: #333;
     color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
 }
 
-/* Media Query cho Mobile (Tối đa 768px) */
-@media (max-width: 768px) {
-    .nav ul {
-        display: none;
-    }
-
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .service-container {
+/* Responsive Layout - Khi màn hình nhỏ hơn hoặc bằng 768px (Tablet/Mobile) */
+@media screen and (max-width: 768px) {
+    .row {
         flex-direction: column;
     }
 
-    .service {
+    .column.side, 
+    .column.middle {
         width: 100%;
     }
 
-    .services, .testimonials {
-        padding: 40px 20px;
+    .topnav a {
+        float: none;
+        width: 100%;
+        text-align: left;
     }
 }
