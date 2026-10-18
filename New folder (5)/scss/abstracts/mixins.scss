@@ -1,0 +1,15 @@
+// Mixin tạo kiểu cho nút bấm
+@mixin button-style($bg-color) {
+  background: $bg-color;
+  color: white;
+  padding: $padding-standard;
+  border-radius: 5px;
+}
+
+// Mixin tạo kiểu cho khung (card)
+@mixin box-style {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: $box-shadow-default;
+}
