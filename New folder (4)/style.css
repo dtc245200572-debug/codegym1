@@ -8,7 +8,8 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.navbar {
+/* Header & Nav */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,50 +23,111 @@ body {
     font-weight: bold;
 }
 
-.nav-links {
+.nav ul {
     list-style: none;
     display: flex;
+    gap: 30px;
 }
 
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
+.nav ul li a {
     text-decoration: none;
     color: white;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
     font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.menu-icon {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-/* Hiển thị danh sách menu khi bật toggle active trên mobile */
-.nav-links.active {
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+.service-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 
-/* Responsive cho màn hình Mobile (tối đa 768px) */
+.service {
+    flex: 1;
+    min-width: 250px;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ddd;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Media Query cho Mobile (Tối đa 768px) */
 @media (max-width: 768px) {
-    .nav-links {
+    .nav ul {
         display: none;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .service-container {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #333;
+    }
+
+    .service {
         width: 100%;
-        text-align: center;
     }
 
-    .nav-links li {
-        padding: 10px;
-    }
-
-    .menu-icon {
-        display: block;
+    .services, .testimonials {
+        padding: 40px 20px;
     }
 }
