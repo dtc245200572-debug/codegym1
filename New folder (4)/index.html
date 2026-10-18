@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Layout</title>
+    <title>Responsive Flexbox Layout</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">Header</header>
-        <nav class="nav">Navigation</nav>
-        <div class="main-container">
-            <main class="content">Main Content</main>
-            <aside class="sidebar">Sidebar</aside>
+
+    <div class="layout-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Header / Logo</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="#">Trang chủ</a>
+            <a href="#">Sản phẩm</a>
+            <a href="#">Dịch vụ</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+
+        <!-- Main Body Area (Main Content + Sidebar) -->
+        <div class="main-body">
+            <main class="content">
+                <h2>Main Content</h2>
+                <p>Đây là khu vực hiển thị nội dung chính của trang web. Bố cục được sắp xếp bằng CSS Flexbox giúp dễ dàng co giãn và sắp xếp lại giao diện tùy theo kích thước màn hình.</p>
+            </main>
+
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <p>Chứa thông tin phụ, danh mục hoặc quảng cáo.</p>
+            </aside>
         </div>
-        <footer class="footer">Footer</footer>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Website Responsive Layout. All rights reserved.</p>
+        </footer>
     </div>
+
 </body>
 </html>
