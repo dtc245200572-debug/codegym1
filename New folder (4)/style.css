@@ -1,60 +1,52 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
     padding: 20px;
 }
 
-h2 {
-    margin: 15px 0 10px 0;
-    font-size: 18px;
-    color: #333;
-}
-
-hr {
-    margin: 25px 0;
-    border: 0;
-    border-top: 1px dashed #ccc;
-}
-
-/* Ví dụ 1: flex-flow: row nowrap */
-.container-1 {
-    display: flex;
-    flex-flow: row nowrap;
-    background-color: #f1f1f1;
-    border-radius: 4px;
-}
-
-.container-1 > div {
-    background-color: #007bff;
+.nav {
+    background-color: #444;
     color: white;
-    width: 100px;
-    margin: 10px;
     text-align: center;
-    line-height: 50px;
-    font-weight: bold;
-    border-radius: 4px;
+    padding: 15px;
 }
 
-/* Ví dụ 2: flex-flow: row-reverse nowrap */
-.container-2 {
+.main-container {
     display: flex;
-    flex-flow: row-reverse nowrap;
-    background-color: #f1f1f1;
-    border-radius: 4px;
+    flex: 1;
 }
 
-.container-2 > div {
-    background-color: #28a745;
-    color: white;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 50px;
-    font-weight: bold;
-    border-radius: 4px;
+.content {
+    flex: 3;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Responsive cho thiết bị di động (màn hình <= 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
 }
